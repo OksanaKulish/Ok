@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Sign Up</h1>
+
+  <div *ngIf="errors != null" class="row">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+      <ul *ngFor="let error of errors" class="list-group">
+        <li class="list-group-item list-group-item-danger">{{error}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmitSignUpForm()">
+    <div class="row">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <div class="form-group">
+          <label for="email-input"><span class="required">*</span> Email</label>
+          <input type="email" formControlName="Email" class="form-control" id="email-input" placeholder="Enter email">
+          <div *ngIf="(signUpForm.controls['Email'].invalid && signUpForm.controls['Email'].touched) || (signUpForm.controls['Email'].invalid && showAllErrors)" class="invalid-tooltip">
+            Email is required and must be valid.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password-input"><span class="required">*</span> Password</label>
+          <input type="password" formControlName="Password" class="form-control" id="password-input" placeholder="Enter password">
+          <div *ngIf="(signUpForm.controls['Password'].invalid && signUpForm.controls['Password'].touched) || (signUpForm.controls['Password'].invalid && showAllErrors)" class="text-right invalid-tooltip">
+            Password is required and must contain at least 9 characters.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password-input"><span class="required">*</span> Confirm Password</label>
+          <input type="password" formControlName="ConfirmPassword" class="form-control" id="confirm-password-input" placeholder="Confirm password">
+          <div *ngIf="(signUpForm.controls['ConfirmPassword'].invalid && signUpForm.controls['ConfirmPassword'].touched) || (signUpForm.controls['ConfirmPassword'].invalid && showAllErrors) ||
+            (signUpForm.controls['Password'].value !== signUpForm.controls['ConfirmPassword'].value && signUpForm.controls['ConfirmPassword'].touched)" class="text-right invalid-tooltip">
+            Passwords must contain at least 9 characters and must match.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="info-input">Additional Information</label>
+          <input type="text" formControlName="Info" class="form-control" id="info-input" placeholder="Enter additional information">
+          <div *ngIf="(signUpForm.controls['Info'].invalid && signUpForm.controls['Info'].touched) || (signUpForm.controls['Info'].invalid && showAllErrors)" class="invalid-tooltip">
+            Additional information should not exceed 256 characters.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </div>
+      <div class="col-12 col-sm-5 col-md-4 col-lg-2">
+          <button routerLink="/account/sign-in" class="btn btn-secondary">Sign In</button>
+        </div>
+    </div>
+  </form>
+</div>

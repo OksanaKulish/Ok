@@ -1,0 +1,226 @@
+Entity Framework Core 2.1.2-rtm-30932 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+No migrations were applied. The database is already up to date.
+Request starting HTTP/1.1 GET http://localhost:44307/api/users?pagesize=20  
+Request starting HTTP/1.1 GET http://localhost:44307/src/logo.png  
+Request starting HTTP/1.1 DEBUG http://localhost:44307/  0
+Request finished in 35.3637ms 200 
+Successfully validated the token.
+Request finished in 229.2426ms 404 
+Route matched with {action = "GetUsers", controller = "Users"}. Executing action ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web)
+Authorization was successful.
+Executing action method ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web) with arguments (1, 20) - Validation state: Valid
+Entity Framework Core 2.1.2-rtm-30932 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [x]
+The LINQ expression 'orderby [x].FullNameNormalized asc' could not be translated and will be evaluated locally.
+The LINQ expression 'Skip(__p_0)' could not be translated and will be evaluated locally.
+The LINQ expression 'Take(__p_1)' could not be translated and will be evaluated locally.
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[FirstName], [x].[LastName], [x].[Login], [x].[PhoneNumber]
+FROM [Users] AS [x]
+Executed action method ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 374.0864ms.
+Executing ObjectResult, writing value of type 'ACWA.Web.Extensions.PaginationHelper`1[[ACWA.Services.TransportModels.User.Response.UserResponse, ACWA.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web) in 425.3556ms
+Request finished in 699.7115ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44307/users/2  
+Request finished in 11.2844ms 404 
+Request starting HTTP/1.1 GET http://localhost:44307/users/2  
+Request finished in 19.5858ms 404 
+Request starting HTTP/1.1 GET http://localhost:44307/api/users/9411d226-79e8-4850-b54a-de09e970629d  
+Successfully validated the token.
+Route matched with {action = "GetUser", controller = "Users"}. Executing action ACWA.Web.Controllers.UsersController.GetUser (ACWA.Web)
+Authorization was successful.
+Executing action method ACWA.Web.Controllers.UsersController.GetUser (ACWA.Web) with arguments (9411d226-79e8-4850-b54a-de09e970629d) - Validation state: Valid
+Entity Framework Core 2.1.2-rtm-30932 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[FirstName], [e].[LastName], [e].[Login], [e].[PhoneNumber]
+FROM [Users] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Executed action method ACWA.Web.Controllers.UsersController.GetUser (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 86.7277ms.
+Executing ObjectResult, writing value of type 'ACWA.Services.TransportModels.User.Response.UserResponse'.
+Executed action ACWA.Web.Controllers.UsersController.GetUser (ACWA.Web) in 99.6586ms
+Request finished in 136.0288ms 200 application/json; charset=utf-8
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Application startup exception
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 63.2671ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 16.7435ms 500 text/html; charset=utf-8
+Request finished in 24.0584ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000002": the application completed without reading the entire request body.
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 34.2326ms 500 text/html; charset=utf-8
+Request finished in 30.67ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000002": the application completed without reading the entire request body.
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000003": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 19.9342ms 500 text/html; charset=utf-8
+Request finished in 20.4482ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000003": the application completed without reading the entire request body.
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 19.0248ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000004": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 15.2356ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000005": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 54.3984ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000005": the application completed without reading the entire request body.
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000006": An unhandled exception was thrown by the application.
+Request finished in 99.9445ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3P", Request id "0HLJPMC7KMO3P:00000006": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 25.0215ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000006": the application completed without reading the entire request body.
+Request finished in 42.9396ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000001": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 18.6919ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000007": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Connection id "0HLJPMC7KMO3Q", Request id "0HLJPMC7KMO3Q:00000008": An unhandled exception was thrown by the application.
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000002": An unhandled exception was thrown by the application.
+Request finished in 55.6842ms 500 text/html; charset=utf-8
+Request finished in 65.4569ms 500 
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 17.074ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3S", Request id "0HLJPMC7KMO3S:00000001": the application completed without reading the entire request body.
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000003": An unhandled exception was thrown by the application.
+Request finished in 149.4884ms 500 
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000003": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 19.4444ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3S", Request id "0HLJPMC7KMO3S:00000002": the application completed without reading the entire request body.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request finished in 14.8625ms 500 text/html; charset=utf-8
+Connection id "0HLJPMC7KMO3R", Request id "0HLJPMC7KMO3R:00000004": the application completed without reading the entire request body.
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (37ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+No migrations were applied. The database is already up to date.
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Request starting HTTP/1.1 DEBUG http://localhost:44307/  0
+Request finished in 50.6009ms 200 
+Policy execution failed.
+Request origin https://localhost:44307 does not have permission to access the resource.
+Route matched with {action = "Post", controller = "Accounts"}. Executing action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web)
+Executing action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) with arguments (ACWA.Web.Models.Login) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (52ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Data], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+Executed action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 329.3139ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) in 528.2202ms
+Request finished in 919.3804ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Policy execution failed.
+Request origin https://localhost:44307 does not have permission to access the resource.
+Route matched with {action = "Post", controller = "Accounts"}. Executing action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web)
+Executing action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) with arguments (ACWA.Web.Models.Login) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Data], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+Executed action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 16.7423ms.
+Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+Executed action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) in 35.4396ms
+Request finished in 65.3169ms 400 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-up application/json 83
+Policy execution failed.
+Request origin https://localhost:44307 does not have permission to access the resource.
+Route matched with {action = "Post", controller = "Accounts"}. Executing action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web)
+Executing action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) with arguments (ACWA.Web.Models.Register) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Data], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Data], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+Executed DbCommand (88ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTimeOffset), @p8='?' (Size = 256), @p9='?' (Size = 256), @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?' (DbType = Boolean), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Data], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+Executed action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 364.7322ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) in 382.5665ms
+Request finished in 433.491ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44307/api/accounts/sign-in application/json 62
+Policy execution failed.
+Request origin https://localhost:44307 does not have permission to access the resource.
+Route matched with {action = "Post", controller = "Accounts"}. Executing action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web)
+Executing action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) with arguments (ACWA.Web.Models.Login) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Data], [u].[Email], [u].[EmailConfirmed], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedEmail] = @__normalizedEmail_0
+Executed action method ACWA.Web.Controllers.AccountsController.Post (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.2842ms.
+Executing ObjectResult, writing value of type 'System.String'.
+Executed action ACWA.Web.Controllers.AccountsController.Post (ACWA.Web) in 73.5103ms
+Request finished in 98.4497ms 200 text/plain; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44307/api/users?pagesize=20  
+Successfully validated the token.
+Route matched with {action = "GetUsers", controller = "Users"}. Executing action ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web)
+Authorization was successful.
+Executing action method ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web) with arguments (1, 20) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [x]
+The LINQ expression 'orderby [x].FullNameNormalized asc' could not be translated and will be evaluated locally.
+The LINQ expression 'Skip(__p_0)' could not be translated and will be evaluated locally.
+The LINQ expression 'Take(__p_1)' could not be translated and will be evaluated locally.
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[FirstName], [x].[LastName], [x].[Login], [x].[PhoneNumber]
+FROM [Users] AS [x]
+Executed action method ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 139.372ms.
+Executing ObjectResult, writing value of type 'ACWA.Web.Extensions.PaginationHelper`1[[ACWA.Services.TransportModels.User.Response.UserResponse, ACWA.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed action ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web) in 181.4615ms
+Request finished in 239.7148ms 200 application/json; charset=utf-8
+Request starting HTTP/1.1 POST http://localhost:44307/api/users/add application/json 115
+Request starting HTTP/1.1 GET http://localhost:44307/api/users?pagesize=20  
+Successfully validated the token.
+Successfully validated the token.
+Policy execution failed.
+Route matched with {action = "GetUsers", controller = "Users"}. Executing action ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web)
+Request origin https://localhost:44307 does not have permission to access the resource.
+Authorization was successful.
+Executing action method ACWA.Web.Controllers.UsersController.GetUsers (ACWA.Web) with arguments (1, 20) - Validation state: Valid
+Entity Framework Core 2.1.4-rtm-31024 initialized 'ACWAContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ACWA.Domain 
+Route matched with {action = "AddUser", controller = "Users"}. Executing action ACWA.Web.Controllers.UsersController.AddUser (ACWA.Web)
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Users] AS [x]
