@@ -19,11 +19,7 @@ namespace ACWA.Domain.EF
     {
             Database.EnsureCreated();
     }
-    
-    public AuctionContext()
-    {
-        Database.EnsureCreated();
-    }
+   
 
 
     /*
