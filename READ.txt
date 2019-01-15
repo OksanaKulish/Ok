@@ -1,0 +1,17 @@
+Content-Type: application/json
+
+Register
+POST https://localhost:44307/api/accounts/sign-up
+{
+  "Email": "test_user@test.com",
+  "Password": "123456789",
+  "Data": "options"
+}
+
+Login
+POST https://localhost:44307/api/accounts/sign-in
+
+{
+"Email": "test_user@test.com",
+"Password": "123456789"
+}
