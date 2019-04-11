@@ -7,7 +7,8 @@ Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30'
 SELECT [MigrationId], [ProductVersion]
 FROM [__EFMigrationsHistory]
 ORDER BY [MigrationId];
-No migrations were applied. The database is already up to date.
+//experiment with branch
+No migrations were applied. The database is already up to date.s
 Request starting HTTP/1.1 GET http://localhost:44307/api/users?pagesize=20  
 Request starting HTTP/1.1 GET http://localhost:44307/src/logo.png  
 Request starting HTTP/1.1 DEBUG http://localhost:44307/  0
